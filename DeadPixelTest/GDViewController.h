@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GDViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *tip;
 
 @end
