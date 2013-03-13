@@ -20,9 +20,6 @@
 		8DE3C26F16E72D5F008DA06A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DE3C26D16E72D5F008DA06A /* InfoPlist.strings */; };
 		8DE3C27116E72D5F008DA06A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3C27016E72D5F008DA06A /* main.m */; };
 		8DE3C27516E72D5F008DA06A /* GDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3C27416E72D5F008DA06A /* GDAppDelegate.m */; };
-		8DE3C27716E72D5F008DA06A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE3C27616E72D5F008DA06A /* Default.png */; };
-		8DE3C27916E72D5F008DA06A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE3C27816E72D5F008DA06A /* Default@2x.png */; };
-		8DE3C27B16E72D5F008DA06A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE3C27A16E72D5F008DA06A /* Default-568h@2x.png */; };
 		8DE3C27E16E72D5F008DA06A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE3C27C16E72D5F008DA06A /* MainStoryboard.storyboard */; };
 		8DE3C28116E72D5F008DA06A /* GDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3C28016E72D5F008DA06A /* GDViewController.m */; };
 /* End PBXBuildFile section */
@@ -45,9 +42,6 @@
 		8DE3C27216E72D5F008DA06A /* DeadPixelTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeadPixelTest-Prefix.pch"; sourceTree = "<group>"; };
 		8DE3C27316E72D5F008DA06A /* GDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDAppDelegate.h; sourceTree = "<group>"; };
 		8DE3C27416E72D5F008DA06A /* GDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDAppDelegate.m; sourceTree = "<group>"; };
-		8DE3C27616E72D5F008DA06A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		8DE3C27816E72D5F008DA06A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		8DE3C27A16E72D5F008DA06A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8DE3C27D16E72D5F008DA06A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8DE3C27F16E72D5F008DA06A /* GDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDViewController.h; sourceTree = "<group>"; };
 		8DE3C28016E72D5F008DA06A /* GDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDViewController.m; sourceTree = "<group>"; };
@@ -122,9 +116,6 @@
 				8DE3C26D16E72D5F008DA06A /* InfoPlist.strings */,
 				8DE3C27016E72D5F008DA06A /* main.m */,
 				8DE3C27216E72D5F008DA06A /* DeadPixelTest-Prefix.pch */,
-				8DE3C27616E72D5F008DA06A /* Default.png */,
-				8DE3C27816E72D5F008DA06A /* Default@2x.png */,
-				8DE3C27A16E72D5F008DA06A /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -182,9 +173,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DE3C26F16E72D5F008DA06A /* InfoPlist.strings in Resources */,
-				8DE3C27716E72D5F008DA06A /* Default.png in Resources */,
-				8DE3C27916E72D5F008DA06A /* Default@2x.png in Resources */,
-				8DE3C27B16E72D5F008DA06A /* Default-568h@2x.png in Resources */,
 				8DE3C27E16E72D5F008DA06A /* MainStoryboard.storyboard in Resources */,
 				8D942C3A16F014DD00356B19 /* Default-Landscape~ipad.png in Resources */,
 				8D942C3C16F0150900356B19 /* Default-Landscape@2x~ipad.png in Resources */,
@@ -274,7 +262,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -282,6 +271,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
