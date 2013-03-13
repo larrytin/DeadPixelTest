@@ -6,13 +6,17 @@
 //  Copyright (c) 2013年 Larry Tin. All rights reserved.
 //
 
+#import <CoreMotion/CoreMotion.h>
 #import "GDViewController.h"
 
 @interface GDViewController ()
 
 @property(strong, nonatomic) NSArray *colors;
+@property CMMotionManager *motionManager;
 
 @end
+
+// static int kAccelerationThreshold = 1.7;
 
 @implementation GDViewController
 
@@ -28,6 +32,24 @@
                   ];
   UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(switchBackground)];
   [self.view addGestureRecognizer:tapGestureRecognizer];
+  
+//  self.motionManager = [[CMMotionManager alloc] init];
+//  self.motionManager.accelerometerUpdateInterval = 1.0/10.0;
+//  NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+//  [self.motionManager startAccelerometerUpdatesToQueue:queue withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
+//    if(error) {
+//      [self.motionManager stopAccelerometerUpdates];
+//    } else {
+//      CMAcceleration acceleration = accelerometerData.acceleration;
+//      if(acceleration.x > kAccelerationThreshold || acceleration.y > kAccelerationThreshold || acceleration.z > kAccelerationThreshold){
+//        [self switchBackground];
+//      }
+//    }
+//  }];
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+  [self switchBackground];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,6 +61,11 @@
 -(void)switchBackground {
   int idx = [self.colors indexOfObject:self.view.backgroundColor];
   self.view.backgroundColor = [self.colors objectAtIndex: ++idx % self.colors.count];
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+  return YES;
 }
 
 
